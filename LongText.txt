@@ -1,0 +1,25 @@
+
+---------------------------------
+а. Кожне слово починається з великої літери Hello My Dear Friend My Name Is Vlad 23 05
+
+b. Кожна голосна літера замінена рандомним числом від 0 до 9 H6ll1 My d88r fr77nd my n8m6 7s Vl4d 23 05
+
+с. Літери, які були введені користувачем в UpperCase здубльовані HHello MMy dear friend my name is VVlad 23 05
+
+d Третє слово видалене Hello My  friend my name is Vlad 23 05
+
+e Між п`ятим і шостим словом вставлене слово - miracle Hello My dear friend my miracle  name is Vlad 23 05
+
+f 7 i 8 слово об'єднанні разом Hello My dear friend my name isJoinedVlad Vlad 23 05
+
+*****
+==========Статистика==========
+4 - цифр
+29 - букв
+33 - букв і цифр
+26 - символів в LowerCase
+3 - символів в UpperCase
+0 - розділових знаків
+9 - знаків розділювачів
+-1 - index of A|a
+Vote index - 34 - порядковий номер голосної з кінця оригінального тексту
