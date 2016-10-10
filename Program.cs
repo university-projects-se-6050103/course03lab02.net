@@ -2,7 +2,6 @@
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 
 namespace lab_02
 {
@@ -108,11 +107,13 @@ namespace lab_02
                 {
                     continue;
                 }
+
                 var pressedCtrlE = line != null && line.ToCharArray()[0] == 5;
                 if (pressedCtrlE)
                 {
                     break;
                 }
+
                 comment += line + '\n';
             }
 
