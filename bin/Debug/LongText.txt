@@ -1,0 +1,25 @@
+
+---------------------------------
+а. Кожне слово починається з великої літери Sadkjas Dajsd Asdj Asjk Dajsk Djka Skdas Jkd Jas
+
+b. Кожна голосна літера замінена рандомним числом від 0 до 9 s7dkj3s d1jsd 0sdj 2sjk d2jsk djk4 skd6s jkd j6s
+
+с. Літери, які були введені користувачем в UpperCase здубльовані sadkjas dajsd asdj asjk dajsk djka skdas jkd jas
+
+d Третє слово видалене sadkjas dajsd  asjk dajsk djka skdas jkd jas
+
+e Між п`ятим і шостим словом вставлене слово - miracle sadkjas dajsd asdj asjk dajsk miracle  djka skdas jkd jas
+
+f 7 i 8 слово об'єднанні разом sadkjas dajsd asdj asjk dajsk djka skdasJoinedjkd jkd jas
+
+*****
+==========Статистика==========
+0 - цифр
+40 - букв
+40 - букв і цифр
+40 - символів в LowerCase
+0 - символів в UpperCase
+0 - розділових знаків
+8 - знаків розділювачів
+-1 - index of A|a
+Vote index - 46 - порядковий номер голосної з кінця оригінального тексту

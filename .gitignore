@@ -34,14 +34,15 @@ $RECYCLE.BIN/
 *.userosscache
 *.sln.docstates
 *.userprefs
-[Dd]ebug/
+[Dd]ebug/*.exe
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
 x64/
 x86/
 bld/
-[Bb]in/
+[Bb]in/*.exe
+[Bb]in/*.mdb
 [Oo]bj/
 [Ll]og/
 .vs/
