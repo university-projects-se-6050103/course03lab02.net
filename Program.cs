@@ -8,8 +8,6 @@ namespace lab_02
 {
     public class Program
     {
-        private static readonly Random RandomInstance = new Random();
-
         public static void Main(string[] args)
         {
             var output = "";
@@ -20,28 +18,28 @@ namespace lab_02
             Console.Clear();
             Console.WriteLine(output += "\n" + new string('-', 33));
 
-            var everyWordCapitalized = ToTitleCase(comment);
+            var everyWordCapitalized = TextTransform.ToTitleCase(comment);
             output += "\n" + "а. Кожне слово починається з великої літери " + everyWordCapitalized;
             PrintLastLine(output);
 
-            var vowelsToRandomInts = ReplaceVowels(comment);
+            var vowelsToRandomInts = TextTransform.ReplaceVowels(comment);
             output += "\n" + "b. Кожна голосна літера замінена рандомним числом від 0 до 9 " + vowelsToRandomInts;
             PrintLastLine(output);
 
-            var doubledUpperCaseLetters = DoubleUpperCaseLetters(comment);
+            var doubledUpperCaseLetters = TextTransform.DoubleUpperCaseLetters(comment);
             output += "\n" + "с. Літери, які були введені користувачем в UpperCase здубльовані " +
                       doubledUpperCaseLetters;
             PrintLastLine(output);
 
-            var withoutThirdWord = RemoveThirdWord(comment);
+            var withoutThirdWord = TextTransform.RemoveThirdWord(comment);
             output += "\n" + "d Третє слово видалене " + withoutThirdWord;
             PrintLastLine(output);
 
-            var withMiracle = InsertMiracle(comment);
+            var withMiracle = TextTransform.InsertMiracle(comment);
             output += "\n" + "e Між п`ятим і шостим словом вставлене слово - miracle " + withMiracle;
             PrintLastLine(output);
 
-            var joined78 = Join78(comment);
+            var joined78 = TextTransform.Join78(comment);
             output += "\n" + "f 7 i 8 слово об'єднанні разом " + joined78;
             PrintLastLine(output);
 
@@ -119,88 +117,6 @@ namespace lab_02
             }
 
             return comment;
-        }
-
-        private static string ToTitleCase(string text)
-        {
-            return Regex.Replace(text, @"(^\w)|(\s\w)", m => m.Value.ToUpper());
-        }
-
-        private static int GetRandomInt()
-        {
-            return RandomInstance.Next(0, 9);
-        }
-
-        private static string ReplaceVowels(string text)
-        {
-            var characters = text.ToCharArray();
-            for (var i = 0; i < characters.Length; i++)
-            {
-                var c = characters[i];
-                if ("aeiou".Contains(char.ToLower(c)))
-                {
-                    characters[i] = GetRandomInt().ToString().ToCharArray()[0];
-                }
-            }
-            return new string(characters);
-        }
-
-        private static string DoubleUpperCaseLetters(string text)
-        {
-            var characters = text.ToCharArray().Select(ch => ch.ToString()).ToArray();
-
-            for (var i = 0; i < characters.Length; i++)
-            {
-                var c = characters[i];
-                if (char.IsUpper(c.ToCharArray()[0]))
-                {
-                    characters[i] = c + c;
-                }
-            }
-
-            return string.Join("", characters);
-        }
-
-        private static string RemoveThirdWord(string text)
-        {
-            var words = text.Split(' ');
-            for (var i = 0; i < words.Length; i++)
-            {
-                if (i == 2)
-                {
-                    words[i] = "";
-                }
-            }
-
-            return string.Join(" ", words);
-        }
-
-        private static string InsertMiracle(string text)
-        {
-            var words = text.Split(' ');
-            for (var i = 0; i < words.Length; i++)
-            {
-                if (i == 4)
-                {
-                    words[i] = words[i] + " miracle ";
-                }
-            }
-
-            return string.Join(" ", words);
-        }
-
-        private static string Join78(string text)
-        {
-            var words = text.Split(' ');
-            for (var i = 0; i < words.Length; i++)
-            {
-                if (i == 6 && words.Length > 6)
-                {
-                    words[i] = string.Join("Joined", words[i], words[i + 1]);
-                }
-            }
-
-            return string.Join(" ", words);
         }
     }
 }
